@@ -23,31 +23,23 @@ console.log("*** Choice one option ***");
 console.table(options);
 console.log("**************************");
 
-// let choice = 'default'
-
-
-
-let selectOption = answer("Select one Option by Number, or name: ");
+let selectOption = answer("Select one Option by Number: ");
 switch (selectOption) {
-    case ("Create", 0):
-      console.log("Your opition selected is Create");
-      break;
-    case ("Read:All", 1):
-      console.log("Your opition selected is Read:All");
-      break;
-    case ("Read:One", 2):
-      console.log("Your opition selected is Read:One");
-      break;
-    case ("Update", 3):
-      console.log("Your opition selected is Update");
-      break;
-    case ("Delete", 4):
-      console.log("Your opition selected is Delete");
-      break;
-    default:
-      console.log("Your option selected don't exist.");
-  }
-// console.log(`${selectOption}`);
-
-
-
+  case ("Create", "0"):
+    console.log("Your option selected is Create");
+    break;
+  case ("Read:All", "1"):
+    console.log("Your option selected is Read:All");
+    break;
+  case ("Read:One", "2"):
+    console.log("Your option selected is Read:One");
+    break;
+  case ("Update", "3"):
+    console.log("Your option selected is Update");
+    break;
+  case ("Delete", "4"):
+    console.log("Your option selected is Delete");
+    break;
+  default:
+    console.log("Your option selected don't exist.");
+}
