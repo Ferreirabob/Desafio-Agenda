@@ -25,6 +25,8 @@ console.log("**************************");
 
 let selectOption = answer("Select one Option by Number: ");
 
+let endApp = "z";
+
 switch (selectOption) {
   case "0":
     console.log("Your option selected is Create");
@@ -43,4 +45,8 @@ switch (selectOption) {
     break;
   default:
     console.log("Your option selected don't exist.");
+}
+
+while (selectOption != endApp) {
+  return selectOption;
 }
