@@ -17,36 +17,41 @@
 
 const answer = require("prompt-sync")({ sigint: true });
 
-const options = ["Create", "Read:All", "Read:One", "Update", "Delete"];
+const options = [
+  "Create",
+  "Read:All",
+  "Read:One",
+  "Update",
+  "Delete",
+  "z - Exit",
+];
 
 console.log("*** Choice one option ***");
 console.table(options);
 console.log("**************************");
 
-let selectOption = answer("Select one Option by Number: ");
+const endApp = "z";
 
-let endApp = "z";
-
-switch (selectOption) {
-  case "0":
-    console.log("Your option selected is Create");
-    break;
-  case "1":
-    console.log("Your option selected is Read:All");
-    break;
-  case "2":
-    console.log("Your option selected is Read:One");
-    break;
-  case "3":
-    console.log("Your option selected is Update");
-    break;
-  case "4":
-    console.log("Your option selected is Delete");
-    break;
-  default:
-    console.log("Your option selected don't exist.");
-}
-
-while (selectOption != endApp) {
-  return selectOption;
-}
+let selectOption = answer("Select one Option by Number, or 'z' to end: ");
+do {
+  switch (selectOption) {
+    case "0":
+      console.log("Your option selected is Create");
+      break;
+    case "1":
+      console.log("Your option selected is Read:All");
+      break;
+    case "2":
+      console.log("Your option selected is Read:One");
+      break;
+    case "3":
+      console.log("Your option selected is Update");
+      break;
+    case "4":
+      console.log("Your option selected is Delete");
+      break;
+    default:
+      console.log("Your option selected don't exist.");
+  }
+  selectOption = answer("Select one Option by Number, or 'z' to end: ");
+} while (selectOption !== endApp);
