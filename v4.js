@@ -32,8 +32,9 @@ console.log("**************************");
 
 const endApp = "z";
 
-let selectOption = answer("Select one Option by Number, or 'z' to end: ");
-do {
+let selectOption = "";
+
+while (selectOption.toLowerCase() !== endApp) {
   switch (selectOption) {
     case "0":
       console.log("Your option selected is Create");
@@ -51,7 +52,9 @@ do {
       console.log("Your option selected is Delete");
       break;
     default:
-      console.log("Your option selected don't exist.");
+      if (selectOption !== "") {
+        console.log("Your option selected don't exist.");
+      }
   }
-  selectOption = answer("Select one Option by Number, or 'z' to end: ");
-} while (selectOption !== endApp);
+  let selectOption = answer("Select one Option by Number, or 'z' to end: ");
+}
