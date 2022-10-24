@@ -33,7 +33,7 @@ const contacts = [
   },
   {
     id: "6",
-    nameUser: "Lucia",
+    nameUser: "Luciana",
     email: "mail@mail.com",
     tel: "(11)1111-1111",
   },
@@ -92,8 +92,8 @@ const listIds = () => {
 };
 
 const findName = () => {
-    const search = findName.includes(`${search}`)
- };
+  const search = findName.includes(`${search}`);
+};
 
 const updateId = (index, attribute, value) => {
   contacts[index][attribute] = value;
@@ -150,7 +150,15 @@ while (selectedOption.toLowerCase() !== "x") {
       clear();
       console.log("You Selected Search By Name");
       spaceline();
-      const nameRecieved = answer('Enter the full or partial name you want to search: ')
+      const nameRecieved = answer(
+        "Enter the full or partial name you want to search:  "
+      );
+
+      const nameFiltered = contacts.filter((contacts) =>
+        contacts.nameUser.includes(`${nameRecieved}`)
+      );
+      console.table(nameFiltered);
+
       keyToContinue();
       break;
 
