@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="material.css">
+    <title>Mockup CRUD</title>
+</head>
+<body>
+    <header>
+    </header>
+    <div>
+            <form class="newUser">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Type your name">
+                <br>
+                <label for="email">E-Mail</label>
+                <input type="text" placeholder="Type your E-mail">
+                <br>
+                <label for="phone">Phone</label>
+                <input type="text" placeholder="Type your phone">
+            </form>
+        <button type="button" class="button blue mobile" id="Create">Submit</button>
+        <table class="users">
+            <thead class="head">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>E-mail</th>
+                    <th>Opition</th>
+                </tr>
+            </thead>
+            <tbody class="body">
+                <tr>
+                    <td>Robert Ferreira</td>
+                    <td>bobf@gmail.com</td>
+                    <td>(21) 97165-1111</td>
+                    <td>
+                        <button type="button" class="edit">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button type="button" class="delete">
+                            <span class="material-icons">delete</span>
+                        </button>                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lucas Barga</td>
+                    <td>lukita@gmail.com</td>
+                    <td>(11) 97165-2222</td>
+                    <td>
+                        <button type="button" class="edit">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button type="button" class="delete">
+                            <span class="material-icons">delete</span>
+                        </button>                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Leandro Varela</td>
+                    <td>varelinha@gmail.com</td>
+                    <td>(21) 97165-3333</td>
+                    <td>
+                        <button type="button" class="edit">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button type="button" class="delete">
+                            <span class="material-icons">delete</span>
+                        </button>                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</div>
+</html>
